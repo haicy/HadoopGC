@@ -39,10 +39,10 @@ hadoop jar HadoopHRCM.jar cn/hpc/Driver {chromosome}
 //Command:
 java -jar Decompress.jar {reference sequence} {compressed file}  {file name directory}  {output directory}
     -Decompress.jar is the decompression executable file,required.
-	-{reference sequence} is the reference sequence of the compression
-	-{compressed file} is the compressed file of the compression
-	-{file name directory} is the directory of the original file, get the file names from the directory
-	-{output directory} is the directory storing the decompressed sequences
+    -{reference sequence} is the reference sequence of the compression
+    -{compressed file} is the compressed file of the compression
+    -{file name directory} is the directory of the original file, get the file names from the directory
+    -{output directory} is the directory storing the decompressed sequences
 
 //Output:
     decompressed file in the {output directory} 
@@ -61,5 +61,5 @@ java -jar Decompress.jar {reference sequence} {compressed file}  {file name dire
 
     java -jar Decompress.jar hg13_chr22.fa chr22.bsc  hdfs://master:9000/chr22 decompressed/
     output: decomressed/hg17_chr22.fa 
-	        decomressed/hg18_chr22.fa
+	    decomressed/hg18_chr22.fa
 ***************************************************************************
