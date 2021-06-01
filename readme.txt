@@ -1,6 +1,6 @@
 ****************************************************************************                             
-	           HadoopGC
-  (Hadoop based Hybrid Referential Compression Method )
+	       HadoopGC
+  (Hadoop based Genome Compression )
 
           Copyright (C) 2020                  
 ****************************************************************************
