@@ -1,5 +1,5 @@
 ****************************************************************************                             
-	           HadoopHRCM
+	           HadoopGC
   (Hadoop based Hybrid Referential Compression Method )
 
           Copyright (C) 2020                  
@@ -7,7 +7,7 @@
 
 1. Introduction
 
-1.1 HadoopHRCM is implemented with Java. It is used to compress large collections of genomes stored in HDFS.
+1.1 HadoopGC is implemented with Java. It is used to compress large collections of genomes stored in HDFS.
 
 1.2 BSC executable file should be put in the same directory of the executable jar package.
 
@@ -20,13 +20,13 @@
 2.1 Compress
 
 //Command:
-hadoop jar HadoopHRCM.jar cn/hpc/Driver {chromosome}
-   -HadoopHRCM.jar is the compression executable file, required.
+hadoop jar HadoopGC.jar cn/hpc/Driver {chromosome}
+   -HadoopGC.jar is the compression executable file, required.
    -cn/hpc/Driver is the main class name of the compression method, required.
    -{chromosome} is the to-be-compressed chromosome, required.
    
 //Notice:
-(1) lib directory should be put in the HadoopHRCM.jar
+(1) lib directory should be put in the HadoopGC.jar
 (2) the reference sequence should be put in the hdfs://master:9000/reference/ directory and the filename should be set as {chromosome}.fa
 (3) the to-be-compressed file paths text file should be put in the ./path/ directory and hdfs://master:9000/path directory and the filename should be set as {chromosome}.txt.
 
@@ -54,7 +54,7 @@ java -jar Decompress.jar {reference sequence} {compressed file} {output director
 
 3.2 compress and decompress hg17_chr22.fa and hg18_chr22.fa, using hg13_chr22.fa as reference. Put hg13_chr22.fa in the hdfs://master:9000/reference, put hg17_chr22.fa and hg18_chr22.fa in the hdfs://master:9000/chr22. The paths of to-be-compressed files are written in chr22.txt in turn. Put chr22.txt in the same directory of HadoopHRCM.jar and hdfs://master:9000/path directory respectively.
 
-    hadoop jar HadoopHRCM.jar cn/hpc/Driver chr22.txt
+    hadoop jar HadoopGC.jar cn/hpc/Driver chr22.txt
     output: chr22.bsc
 
 
