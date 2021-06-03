@@ -52,7 +52,7 @@ java -jar Decompress.jar {reference sequence} {compressed file} {output director
 
 3.1 You can download the executable jar package and the test datasets in the test directory.
 
-3.2 compress and decompress hg17_chr22.fa and hg18_chr22.fa, using hg13_chr22.fa as reference. Put hg13_chr22.fa in the hdfs://master:9000/reference, put hg17_chr22.fa and hg18_chr22.fa in the hdfs://master:9000/chr22. The paths of to-be-compressed files are written in chr22.txt in turn. Put chr22.txt in the same directory of HadoopHRCM.jar and hdfs://master:9000/path directory respectively.
+3.2 compress and decompress hg17_chr22.fa and hg18_chr22.fa, using hg13_chr22.fa as reference. Put hg13_chr22.fa in the hdfs://master:9000/reference, put hg17_chr22.fa and hg18_chr22.fa in the hdfs://master:9000/chr22. The paths of to-be-compressed files are written in chr22.txt in turn. Put chr22.txt in the same directory of HadoopGC.jar and hdfs://master:9000/path directory respectively.
 
     hadoop jar HadoopGC.jar cn/hpc/Driver chr22.txt
     output: chr22.bsc
